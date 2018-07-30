@@ -26,18 +26,18 @@ fn DialogCallback =
 pluginManager.loadClass FBXIMP;
 pluginManager.loadClass FBXEXP;
 
-openLog "D:/The-Art-of-Game-Design/TAG_Unity_Project_Files/TheArtOfGames/Temp/3dsMax.log" mode:"w"
+openLog "C:/Users/CHILLE~1/Desktop/_THEAR~1/_THEAR~1/THE-AR~1/TAG_UN~1/THEART~1/Temp/3dsMax.log" mode:"w"
 print "Start of log file."; flushLog();
 while true do
 (	
-	if ( fileExists "D:/The-Art-of-Game-Design/TAG_Unity_Project_Files/TheArtOfGames/Temp/MaxCommandPipe" ) then
+	if ( fileExists "C:/Users/CHILLE~1/Desktop/_THEAR~1/_THEAR~1/THE-AR~1/TAG_UN~1/THEART~1/Temp/MaxCommandPipe" ) then
 	(
 		exportNormals = false;
 		exportTangents = false;
 		bakeAnimations = false;
 		useFileUnits = false;
 	
-		waitpipe = (openFile "D:/The-Art-of-Game-Design/TAG_Unity_Project_Files/TheArtOfGames/Temp/MaxCommandPipe" mode:"r");
+		waitpipe = (openFile "C:/Users/CHILLE~1/Desktop/_THEAR~1/_THEAR~1/THE-AR~1/TAG_UN~1/THEART~1/Temp/MaxCommandPipe" mode:"r");
 		filename = (readLine waitpipe);
 		fbxFilename = (readline waitpipe);
 		
@@ -154,7 +154,7 @@ while true do
 					print "After fbx export"; flushLog();
 				)
 
-				deleteFile "D:/The-Art-of-Game-Design/TAG_Unity_Project_Files/TheArtOfGames/Temp/MaxCommandPipe";
+				deleteFile "C:/Users/CHILLE~1/Desktop/_THEAR~1/_THEAR~1/THE-AR~1/TAG_UN~1/THEART~1/Temp/MaxCommandPipe";
 				print "Finished max loading and fbx conversion"; flushLog();
 			) -- with defaultAction
 		)
